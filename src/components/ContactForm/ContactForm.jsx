@@ -3,8 +3,9 @@ import css from './ContactForm.module.css';
 import { Field, Form, Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact, selectContacts } from '../../redux/contactsSlice';
+import { selectContacts } from '../../redux/contactsSlice';
 import { showWarning } from '../../js/message';
+import { addContact } from '../../redux/contactsOps';
 
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
