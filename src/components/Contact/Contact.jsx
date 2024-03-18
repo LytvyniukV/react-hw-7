@@ -11,7 +11,6 @@ export const Contact = ({ id, name, number }) => {
       <div className={css.contactWrap}>
         <p className={css.text}>
           <FaUser className={css.icon} size={15} /> {name}
-          {id}
         </p>
         <p className={css.number}>
           <FaPhone className={css.icon} size={15} /> {number}

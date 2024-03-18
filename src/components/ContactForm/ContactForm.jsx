@@ -24,15 +24,17 @@ const ContactsSchema = Yup.object().shape({
 export const ContactForm = () => {
   const nameId = useId();
   const numberId = useId();
-  const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
+  const dispatch = useDispatch();
+
   const submitForm = (values, actions) => {
     if (
       contacts.find(
         contact => contact.name.toLowerCase() === values.name.toLowerCase()
       )
     ) {
-      return showWarning(values.name);
+      showWarning(values.name);
+      return;
     }
     dispatch(addContact(values));
     actions.resetForm();
